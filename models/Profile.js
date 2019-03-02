@@ -25,6 +25,10 @@ const ProfileSchema = new Schema({
     type: String,
     required: true
   },
+  date: {
+    type: Date,
+    default: Date.now
+  },
   skills: {
     type: [String], // Array into the database
     required: true
@@ -47,10 +51,6 @@ const ProfileSchema = new Schema({
     },
     instagram: {
       type: String
-    },
-    date: {
-      type: Date,
-      default: Date.now
     }
   }
 });
